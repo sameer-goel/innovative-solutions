@@ -6,119 +6,119 @@
 
 ## 🎞️ Gallery
 
-Click any GIF to open the live solution in a new tab.
+Click any preview to open the live solution.
 
 ### 🤖 Autonomous-AI
 
-#### SAaaS — Solutions Architect as a Service
-*Agentic portal that turns problem statements into cloud-agnostic solution designs using a swarm of AI agents.*
+#### SAaaS
+Design your cloud solution in minutes, not weeks.
 
 [![SAaaS](gallery/saaas.gif)](https://sameer-goel.github.io/innovative-solutions/Autonomous-AI/saaas/)
 
 #### AI Hackathon Arena
-*36 free OpenRouter AI models compete in real-time hackathons with live voting and leaderboards.*
+Let 36 AI models solve your problem while you watch.
 
 [![AI Hackathon Arena](gallery/ai-hackathon.gif)](https://ai-pool.netlify.app/)
 
 ### 🎓 Learn-AI
 
 #### AI Evolution Timeline
-*Scrollable interactive timeline of AI's evolution.*
+See where AI came from and where it's going, in one scroll.
 
 [![AI Evolution Timeline](gallery/ai-evolution-timeline.gif)](https://sameer-goel.github.io/innovative-solutions/Learn-AI/ai-evolution-timeline/)
 
 #### AI Career Explorer
-*Interactive explorer of AI career paths and roles.*
+Find the AI role that fits who you already are.
 
 [![AI Career Explorer](gallery/ai-career-explorer.gif)](https://sameer-goel.github.io/innovative-solutions/Learn-AI/ai-career-explorer/)
 
 #### Update Mind Space
-*"Unlock Your Hidden Superpower with AI." Book reader and learning content — flagship content destination.*
+Unlock the hidden superpower you already have: working with AI.
 
 [![Update Mind Space](gallery/updatemind-space.gif)](http://updatemind.space/)
 
 #### Learn Creative Prompt Engineering
-*A 6-module journey reframing prompt engineering as a spiritual practice.*
+Stop rushing to answers. Start falling in love with questions.
 
 [![Learn Creative Prompt Engineering](gallery/learn-prompt-engineering.gif)](https://sameer-goel.github.io/learn_creative_prompt_engineering/)
 
 ### 🧩 Misc
 
 #### Crisis Support Program
-*AI-powered donor-recipient matching for government crisis response.*
+When crisis hits, match the right helper to the right need in minutes.
 
 [![Crisis Support Program](gallery/crisis-support-program.gif)](https://sameer-goel.github.io/crisis-support-program/)
 
 #### Life Experiences Dashboard
-*Countdown of years, days, and seasons remaining; visual life timeline; goal tracking.*
+See how much life you have left. Spend it on what matters.
 
 [![Life Experiences Dashboard](gallery/life-dashboard.gif)](https://sameer-goel.github.io/life/)
 
 #### Dvine Meet
-*Offline-first PWA that transforms casual gatherings into intentional sacred-space experiences.*
+Turn any gathering into a moment people remember.
 
 [![Dvine Meet](gallery/divinemeet.gif)](https://sameer-goel.github.io/divinemeet/)
 
 ### 🧠 mind
 
 #### Brain Gym
-*Neuroscience-backed cognitive training with Stroop tests, variants, and brain scoring.*
+Reclaim the focus and attention that scrolling stole from you.
 
 [![Brain Gym](gallery/brain-gym.gif)](https://sameer-goel.github.io/innovative-solutions/mind/brain-gym/)
 
 #### Total Recall
-*Book quiz app with active recall and spaced repetition, 8 popular books, gamified scoring.*
+Remember the books that changed you, not just the ones you finished.
 
 [![Total Recall](gallery/total-recall.gif)](https://sameer-goel.github.io/innovative-solutions/mind/total-recall/)
 
 #### Binaural Beats
-*Binaural beat generator with dark theme and Font Awesome icons.*
+Reach focus, calm, or deep sleep on demand.
 
 [![Binaural Beats](gallery/binaural-beats.gif)](https://sameer-goel.github.io/innovative-solutions/mind/binaural-beats/)
 
 #### Solfeggio Frequency
-*Sacred-frequency tone player for healing and meditation.*
+Ancient healing frequencies, one tap away.
 
 [![Solfeggio Frequency](gallery/solfeggio-frequency.gif)](https://sameer-goel.github.io/innovative-solutions/mind/solfeggio-frequency/)
 
 #### Meditation Game
-*Interactive meditation game.*
+Meditation you'll actually stick with.
 
 [![Meditation Game](gallery/meditation-game.gif)](https://sameer-goel.github.io/innovative-solutions/mind/meditation-game/)
 
 ### 💪 body
 
 #### Breathing Circle
-*Breathwork app with 12 techniques (4-7-8, Box, Wim Hof, Ujjayi, etc.) and a glowing-circle visual guide.*
+Twelve breaths to calm, focus, or energy. Pick one.
 
 [![Breathing Circle](gallery/breathing-circle.gif)](https://sameer-goel.github.io/breathing-circle/)
 
 ### 🕉️ soul
 
 #### Ego Death Simulation
-*A visualization journey through ego dissolution and spiritual rebirth.*
+Dissolve the ego. Meet what's still there.
 
 [![Ego Death Simulation](gallery/ego-death-simulation.gif)](https://sameer-goel.github.io/innovative-solutions/soul/ego-death-simulation/)
 
 #### Numerology Gateway
-*Vedic Numerology Calculator using the Chaldean system (Harish Johari).*
+Discover the numbers that shape your life.
 
 [![Numerology Gateway](gallery/numerology.gif)](https://sameer-goel.github.io/numerology/)
 
 ### 🌟 Portals
 
 #### Sameer AI Portal
-*The Digital Consciousness landing page. Top-level portal linking to all projects.*
+Where artificial intelligence meets inner intelligence.
 
 [![Sameer AI Portal](gallery/sameerai.gif)](https://sameerai.com/)
 
 #### Meet Sameer
-*Personal landing hosting sub-apps like LeftBrainRightBrain, CreativitySolutionLab, futureAI.*
+The mind behind Sameer AI.
 
 [![Meet Sameer](gallery/meet-sameer.gif)](https://sameer-goel.github.io/meet/)
 
 #### MyAppStore
-*"App Store of AI Apps." Portfolio aggregator with interactive-portfolio subsection.*
+Every app Sameer built, in one place.
 
 [![MyAppStore](gallery/myappstore.gif)](https://sameer-goel.github.io/MyAppStore/)
 
