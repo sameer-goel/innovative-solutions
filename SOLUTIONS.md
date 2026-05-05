@@ -130,4 +130,4 @@ external_projects:
 
 ## Consolidation log
 
-- **2026-05-05**: `total-recall` and `BrainTrain/BrainGym` brought into `mind/` (this repo). Originals will be made private, then deleted later once the consolidated versions are confirmed working.
+- **2026-05-05**: `total-recall` and `BrainTrain/BrainGym` consolidated into `mind/` (this repo). Original repos `sameer-goel/total-recall` and `sameer-goel/BrainTrain` were made private then deleted on the same day. Old Pages URLs now return 404.
