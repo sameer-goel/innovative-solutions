@@ -4,6 +4,126 @@
 >
 > Every project here has a **category** matching the taxonomy in [`CATEGORIES.md`](CATEGORIES.md), so the portfolio can be rendered as one unified view.
 
+## 🎞️ Gallery
+
+Click any GIF to open the live solution in a new tab.
+
+### 🤖 Autonomous-AI
+
+#### SAaaS — Solutions Architect as a Service
+*Agentic portal that turns problem statements into cloud-agnostic solution designs using a swarm of AI agents.*
+
+[![SAaaS](gallery/saaas.gif)](https://sameer-goel.github.io/innovative-solutions/Autonomous-AI/saaas/)
+
+#### AI Hackathon Arena
+*36 free OpenRouter AI models compete in real-time hackathons with live voting and leaderboards.*
+
+[![AI Hackathon Arena](gallery/ai-hackathon.gif)](https://ai-pool.netlify.app/)
+
+### 🎓 Learn-AI
+
+#### AI Evolution Timeline
+*Scrollable interactive timeline of AI's evolution.*
+
+[![AI Evolution Timeline](gallery/ai-evolution-timeline.gif)](https://sameer-goel.github.io/innovative-solutions/Learn-AI/ai-evolution-timeline/)
+
+#### AI Career Explorer
+*Interactive explorer of AI career paths and roles.*
+
+[![AI Career Explorer](gallery/ai-career-explorer.gif)](https://sameer-goel.github.io/innovative-solutions/Learn-AI/ai-career-explorer/)
+
+#### Update Mind Space
+*"Unlock Your Hidden Superpower with AI." Book reader and learning content — flagship content destination.*
+
+[![Update Mind Space](gallery/updatemind-space.gif)](http://updatemind.space/)
+
+#### Learn Creative Prompt Engineering
+*A 6-module journey reframing prompt engineering as a spiritual practice.*
+
+[![Learn Creative Prompt Engineering](gallery/learn-prompt-engineering.gif)](https://sameer-goel.github.io/learn_creative_prompt_engineering/)
+
+### 🧩 Misc
+
+#### Crisis Support Program
+*AI-powered donor-recipient matching for government crisis response.*
+
+[![Crisis Support Program](gallery/crisis-support-program.gif)](https://sameer-goel.github.io/crisis-support-program/)
+
+#### Life Experiences Dashboard
+*Countdown of years, days, and seasons remaining; visual life timeline; goal tracking.*
+
+[![Life Experiences Dashboard](gallery/life-dashboard.gif)](https://sameer-goel.github.io/life/)
+
+#### Dvine Meet
+*Offline-first PWA that transforms casual gatherings into intentional sacred-space experiences.*
+
+[![Dvine Meet](gallery/divinemeet.gif)](https://sameer-goel.github.io/divinemeet/)
+
+### 🧠 mind
+
+#### Brain Gym
+*Neuroscience-backed cognitive training with Stroop tests, variants, and brain scoring.*
+
+[![Brain Gym](gallery/brain-gym.gif)](https://sameer-goel.github.io/innovative-solutions/mind/brain-gym/)
+
+#### Total Recall
+*Book quiz app with active recall and spaced repetition, 8 popular books, gamified scoring.*
+
+[![Total Recall](gallery/total-recall.gif)](https://sameer-goel.github.io/innovative-solutions/mind/total-recall/)
+
+#### Binaural Beats
+*Binaural beat generator with dark theme and Font Awesome icons.*
+
+[![Binaural Beats](gallery/binaural-beats.gif)](https://sameer-goel.github.io/innovative-solutions/mind/binaural-beats/)
+
+#### Solfeggio Frequency
+*Sacred-frequency tone player for healing and meditation.*
+
+[![Solfeggio Frequency](gallery/solfeggio-frequency.gif)](https://sameer-goel.github.io/innovative-solutions/mind/solfeggio-frequency/)
+
+#### Meditation Game
+*Interactive meditation game.*
+
+[![Meditation Game](gallery/meditation-game.gif)](https://sameer-goel.github.io/innovative-solutions/mind/meditation-game/)
+
+### 💪 body
+
+#### Breathing Circle
+*Breathwork app with 12 techniques (4-7-8, Box, Wim Hof, Ujjayi, etc.) and a glowing-circle visual guide.*
+
+[![Breathing Circle](gallery/breathing-circle.gif)](https://sameer-goel.github.io/breathing-circle/)
+
+### 🕉️ soul
+
+#### Ego Death Simulation
+*A visualization journey through ego dissolution and spiritual rebirth.*
+
+[![Ego Death Simulation](gallery/ego-death-simulation.gif)](https://sameer-goel.github.io/innovative-solutions/soul/ego-death-simulation/)
+
+#### Numerology Gateway
+*Vedic Numerology Calculator using the Chaldean system (Harish Johari).*
+
+[![Numerology Gateway](gallery/numerology.gif)](https://sameer-goel.github.io/numerology/)
+
+### 🌟 Portals
+
+#### Sameer AI Portal
+*The Digital Consciousness landing page. Top-level portal linking to all projects.*
+
+[![Sameer AI Portal](gallery/sameerai.gif)](https://sameerai.com/)
+
+#### Meet Sameer
+*Personal landing hosting sub-apps like LeftBrainRightBrain, CreativitySolutionLab, futureAI.*
+
+[![Meet Sameer](gallery/meet-sameer.gif)](https://sameer-goel.github.io/meet/)
+
+#### MyAppStore
+*"App Store of AI Apps." Portfolio aggregator with interactive-portfolio subsection.*
+
+[![MyAppStore](gallery/myappstore.gif)](https://sameer-goel.github.io/MyAppStore/)
+
+---
+
 ## How an AI agent should read this
 
 1. Start with `CATEGORIES.md` to understand the category system.

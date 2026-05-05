@@ -1,0 +1,11 @@
+# Gallery recording tooling — keep the scripts but not the node deps or previews
+gallery/tools/node_modules/
+gallery/tools/preview.html
+gallery/tools/batch.log
+gallery/tools/package-lock.json
+
+# Playwright intermediate files
+gallery/webm/
+
+# macOS
+.DS_Store
