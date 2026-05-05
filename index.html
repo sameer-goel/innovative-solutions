@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Innovative Solutions</title>
+  <style>
+    :root {
+      --bg: #1e1e1e;
+      --window: rgba(40, 40, 43, 0.92);
+      --sidebar: rgba(30, 30, 33, 0.85);
+      --content: rgba(48, 48, 51, 0.6);
+      --border: rgba(255, 255, 255, 0.08);
+      --divider: rgba(255, 255, 255, 0.05);
+      --text: #f5f5f7;
+      --muted: #98989d;
+      --label: #6e6e73;
+      --accent: #0a84ff;
+      --accent-hover: #409cff;
+      --hover: rgba(255, 255, 255, 0.06);
+      --selected: rgba(10, 132, 255, 0.85);
+      --tile: rgba(255, 255, 255, 0.04);
+      --tile-hover: rgba(255, 255, 255, 0.08);
+      --shadow: 0 20px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.04);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      height: 100%;
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Helvetica Neue", Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 20% 10%, #2a3a55 0%, transparent 40%),
+        radial-gradient(circle at 80% 90%, #3a2a55 0%, transparent 40%),
+        linear-gradient(135deg, #1a1d24 0%, #0f1116 100%);
+      overflow: hidden;
+    }
+
+    /* ============ window chrome ============ */
+    .window {
+      position: absolute;
+      inset: 2vh 2vw;
+      background: var(--window);
+      backdrop-filter: blur(40px) saturate(180%);
+      -webkit-backdrop-filter: blur(40px) saturate(180%);
+      border-radius: 12px;
+      box-shadow: var(--shadow);
+      display: grid;
+      grid-template-rows: 38px 1fr;
+      grid-template-columns: 240px 1fr;
+      grid-template-areas: "titlebar titlebar" "sidebar content";
+      overflow: hidden;
+      border: 1px solid var(--border);
+    }
+
+    .titlebar {
+      grid-area: titlebar;
+      display: flex;
+      align-items: center;
+      padding: 0 14px;
+      gap: 16px;
+      border-bottom: 1px solid var(--divider);
+      background: linear-gradient(180deg, rgba(60,60,65,0.5), rgba(40,40,43,0.5));
+      user-select: none;
+    }
+
+    .traffic-lights { display: flex; gap: 8px; }
+    .light {
+      width: 12px; height: 12px; border-radius: 50%;
+      border: 0.5px solid rgba(0,0,0,0.25);
+    }
+    .light.close { background: #ff5f57; }
+    .light.min { background: #febc2e; }
+    .light.max { background: #28c840; }
+
+    .titlebar .title {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--text);
+      flex: 1;
+      text-align: center;
+      letter-spacing: 0.2px;
+    }
+
+    .titlebar .path {
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    /* ============ sidebar ============ */
+    .sidebar {
+      grid-area: sidebar;
+      background: var(--sidebar);
+      border-right: 1px solid var(--divider);
+      padding: 10px 0;
+      overflow-y: auto;
+    }
+
+    .sidebar-section {
+      padding: 10px 14px 4px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--label);
+    }
+
+    .sidebar-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 10px;
+      margin: 0 6px;
+      border-radius: 6px;
+      font-size: 13px;
+      color: var(--text);
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.08s;
+    }
+    .sidebar-item:hover { background: var(--hover); }
+    .sidebar-item.active { background: var(--selected); color: #fff; }
+    .sidebar-item.active .count { color: rgba(255,255,255,0.8); }
+
+    .sidebar-item .icon {
+      width: 16px; height: 16px;
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 14px;
+      flex-shrink: 0;
+    }
+    .sidebar-item .label { flex: 1; }
+    .sidebar-item .count {
+      font-size: 11px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ============ content ============ */
+    .content {
+      grid-area: content;
+      background: var(--content);
+      padding: 24px 28px;
+      overflow-y: auto;
+    }
+
+    .content-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      margin-bottom: 6px;
+    }
+    .content-header h1 {
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: -0.3px;
+    }
+    .content-header .count-badge {
+      font-size: 12px;
+      color: var(--muted);
+      font-variant-numeric: tabular-nums;
+    }
+    .content-tagline {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      color: var(--label);
+      margin: 18px 0 10px;
+    }
+
+    /* ============ tile grid ============ */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+      gap: 6px;
+    }
+
+    .tile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 14px 8px 10px;
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      cursor: pointer;
+      transition: background 0.1s, transform 0.1s;
+      text-align: center;
+    }
+    .tile:hover { background: var(--tile-hover); }
+    .tile:active { transform: scale(0.96); }
+
+    .tile-icon {
+      width: 64px; height: 64px;
+      border-radius: 14px;
+      background: linear-gradient(135deg, var(--tile-gradient-a, #0a84ff), var(--tile-gradient-b, #5e5ce6));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 30px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.15);
+      margin-bottom: 10px;
+    }
+
+    .tile.external .tile-icon::after {
+      content: "↗";
+      position: absolute;
+      transform: translate(22px, -22px);
+      font-size: 12px;
+      color: #fff;
+      background: rgba(0,0,0,0.6);
+      width: 18px; height: 18px;
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    .tile-name {
+      font-size: 12.5px;
+      font-weight: 500;
+      line-height: 1.25;
+      max-width: 120px;
+      word-break: break-word;
+    }
+    .tile-sub {
+      font-size: 10.5px;
+      color: var(--muted);
+      margin-top: 2px;
+    }
+
+    /* per-category gradients, reused for tiles in that category */
+    [data-category="Autonomous-AI"]     { --tile-gradient-a: #00d4ff; --tile-gradient-b: #0a84ff; }
+    [data-category="Learn-AI"]          { --tile-gradient-a: #0a84ff; --tile-gradient-b: #5e5ce6; }
+    [data-category="Misc"]              { --tile-gradient-a: #5e5ce6; --tile-gradient-b: #bf5af2; }
+    [data-category="mind"]              { --tile-gradient-a: #ffd60a; --tile-gradient-b: #ff9500; }
+    [data-category="body"]              { --tile-gradient-a: #30d158; --tile-gradient-b: #32ade6; }
+    [data-category="soul"]              { --tile-gradient-a: #ff375f; --tile-gradient-b: #bf5af2; }
+
+    .empty {
+      color: var(--muted);
+      font-size: 13px;
+      font-style: italic;
+      padding: 20px 4px;
+    }
+
+    /* scrollbars */
+    .sidebar::-webkit-scrollbar, .content::-webkit-scrollbar { width: 10px; }
+    .sidebar::-webkit-scrollbar-thumb, .content::-webkit-scrollbar-thumb {
+      background: rgba(255,255,255,0.1);
+      border-radius: 5px;
+      border: 2px solid transparent;
+      background-clip: padding-box;
+    }
+    .sidebar::-webkit-scrollbar-thumb:hover, .content::-webkit-scrollbar-thumb:hover {
+      background: rgba(255,255,255,0.2);
+      background-clip: padding-box;
+      border: 2px solid transparent;
+    }
+
+    @media (max-width: 720px) {
+      .window {
+        grid-template-columns: 1fr;
+        grid-template-rows: 38px auto 1fr;
+        grid-template-areas: "titlebar" "sidebar" "content";
+        inset: 0;
+        border-radius: 0;
+      }
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid var(--divider);
+        max-height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="window">
+
+    <div class="titlebar">
+      <div class="traffic-lights">
+        <span class="light close"></span>
+        <span class="light min"></span>
+        <span class="light max"></span>
+      </div>
+      <div class="title">Innovative Solutions</div>
+      <div class="path">sameer-goel/innovative-solutions</div>
+    </div>
+
+    <aside class="sidebar" id="sidebar"></aside>
+
+    <main class="content" id="content"></main>
+
+  </div>
+
+  <script>
+    // ==================== data ====================
+    const CATEGORIES = [
+      {
+        id: "Autonomous-AI",
+        icon: "🤖",
+        label: "Autonomous-AI",
+        tagline: "Agentic systems where AI acts on its own.",
+        internal: [
+          { name: "SAaaS", sub: "Solutions Architect as a Service", icon: "🧠", href: "Autonomous-AI/saaas/" }
+        ],
+        external: [
+          { name: "Agentic AI Systems", icon: "🕸️", href: "https://www.canva.com/design/DAFf1YZAEas/" },
+          { name: "Vibe Coding", icon: "🎧", href: "https://sameerai.my.canva.site/vibe" }
+        ]
+      },
+      {
+        id: "Learn-AI",
+        icon: "🎓",
+        label: "Learn-AI",
+        tagline: "Educational and exploratory experiences about AI.",
+        internal: [
+          { name: "AI Evolution Timeline", sub: "History of AI", icon: "🕰️", href: "Learn-AI/ai-evolution-timeline/" },
+          { name: "AI Career Explorer", sub: "Career paths in AI", icon: "🧭", href: "Learn-AI/ai-career-explorer/" }
+        ],
+        external: [
+          { name: "Cultivate Inner Intelligence (book)", icon: "📖", href: "https://updatemind.space/bookreader.html" },
+          { name: "GenAI Gym for Employees", icon: "🏋️", href: "https://www.canva.com/design/DAGjGm-t5kk/" },
+          { name: "Creative Prompt Engineering", icon: "✨", href: "https://sameer-goel.github.io/learn_creative_prompt_engineering/" },
+          { name: "Emotional Intelligence at Workplace", icon: "💬", href: "https://prezi.com/view/kSVzdmy1HMMAuoiY2rGx/" }
+        ]
+      },
+      {
+        id: "Misc",
+        icon: "🧩",
+        label: "Misc",
+        tagline: "Catch-all for AI-adjacent projects.",
+        internal: [
+          { name: "Prediction", sub: "Exploration engine", icon: "🔮", href: "Misc/prediction/" }
+        ],
+        external: [
+          { name: "Human Evolution", icon: "🧬", href: "https://www.canva.com/design/DAGv-_RUo00/" },
+          { name: "Bio Computing", icon: "🧫", href: "https://sameerai.my.canva.site/biocomputing" }
+        ]
+      },
+      {
+        id: "mind",
+        icon: "🧠",
+        label: "mind",
+        tagline: "Sound, frequency, and memory apps.",
+        internal: [
+          { name: "Binaural Beats", sub: "Current", icon: "🎚️", href: "mind/binaural-beats/" },
+          { name: "Binaural Beats Generator", sub: "Earlier", icon: "🎛️", href: "mind/binaural-beats-generator/" },
+          { name: "Solfeggio Frequency", sub: "Sacred tones", icon: "🔔", href: "mind/solfeggio-frequency/" },
+          { name: "Meditation Game", sub: "Interactive", icon: "🎮", href: "mind/meditation-game/" }
+        ],
+        external: [
+          { name: "Total Recall", icon: "📚", href: "https://sameer-goel.github.io/total-recall/" },
+          { name: "Left Brain Right Brain", icon: "🧠", href: "https://meet.sameerai.com/apps/LeftBrainRightBrain.html" }
+        ]
+      },
+      {
+        id: "body",
+        icon: "💪",
+        label: "body",
+        tagline: "Physical wellness explorations.",
+        internal: [],
+        external: [
+          { name: "Swar Science", icon: "🌬️", href: "https://www.canva.com/design/DAGX3TfN6xQ/" }
+        ]
+      },
+      {
+        id: "soul",
+        icon: "🕉️",
+        label: "soul",
+        tagline: "Spiritual and consciousness experiences.",
+        internal: [
+          { name: "Ego Death Simulation", sub: "Visualization", icon: "🌀", href: "soul/ego-death-simulation/" }
+        ],
+        external: [
+          { name: "Numerology", icon: "🔢", href: "https://www.canva.com/design/DAF2AyjuH0g/" },
+          { name: "Chakra Wise Goal Planning", icon: "🎯", href: "https://www.canva.com/design/DAGa_B0oCWY/" },
+          { name: "Science of Shapes", icon: "🔷", href: "https://www.canva.com/design/DAGZcjKaHGc/" }
+        ]
+      }
+    ];
+
+    // ==================== rendering ====================
+    const sidebarEl = document.getElementById("sidebar");
+    const contentEl = document.getElementById("content");
+
+    function h(tag, attrs = {}, children = []) {
+      const el = document.createElement(tag);
+      for (const [k, v] of Object.entries(attrs)) {
+        if (k === "class") el.className = v;
+        else if (k === "html") el.innerHTML = v;
+        else if (k.startsWith("on")) el.addEventListener(k.slice(2), v);
+        else el.setAttribute(k, v);
+      }
+      (Array.isArray(children) ? children : [children]).forEach(c => {
+        if (c == null) return;
+        el.appendChild(typeof c === "string" ? document.createTextNode(c) : c);
+      });
+      return el;
+    }
+
+    function renderSidebar(activeId) {
+      sidebarEl.innerHTML = "";
+      sidebarEl.appendChild(h("div", { class: "sidebar-section" }, "AI"));
+      CATEGORIES.filter(c => ["Autonomous-AI", "Learn-AI", "Misc"].includes(c.id))
+        .forEach(c => sidebarEl.appendChild(renderSidebarItem(c, activeId)));
+
+      sidebarEl.appendChild(h("div", { class: "sidebar-section", style: "margin-top:14px" }, "Inner Intelligence"));
+      CATEGORIES.filter(c => ["mind", "body", "soul"].includes(c.id))
+        .forEach(c => sidebarEl.appendChild(renderSidebarItem(c, activeId)));
+    }
+
+    function renderSidebarItem(cat, activeId) {
+      const total = cat.internal.length + cat.external.length;
+      return h("div", {
+        class: "sidebar-item" + (cat.id === activeId ? " active" : ""),
+        onclick: () => selectCategory(cat.id)
+      }, [
+        h("span", { class: "icon" }, cat.icon),
+        h("span", { class: "label" }, cat.label),
+        h("span", { class: "count" }, String(total))
+      ]);
+    }
+
+    function renderContent(cat) {
+      contentEl.innerHTML = "";
+      contentEl.setAttribute("data-category", cat.id);
+
+      contentEl.appendChild(h("div", { class: "content-header" }, [
+        h("h1", {}, cat.label),
+        h("div", { class: "count-badge" },
+          `${cat.internal.length} project${cat.internal.length === 1 ? "" : "s"}` +
+          (cat.external.length ? ` · ${cat.external.length} external` : "")
+        )
+      ]));
+      contentEl.appendChild(h("div", { class: "content-tagline" }, cat.tagline));
+
+      // internal projects
+      contentEl.appendChild(h("div", { class: "section-label" }, "Projects"));
+      if (cat.internal.length === 0) {
+        contentEl.appendChild(h("div", { class: "empty" }, "No internal apps yet. Contributions welcome."));
+      } else {
+        const grid = h("div", { class: "grid" });
+        cat.internal.forEach(p => grid.appendChild(renderTile(p, false)));
+        contentEl.appendChild(grid);
+      }
+
+      // externals
+      if (cat.external.length > 0) {
+        contentEl.appendChild(h("div", { class: "section-label" }, "External Links"));
+        const grid = h("div", { class: "grid" });
+        cat.external.forEach(p => grid.appendChild(renderTile(p, true)));
+        contentEl.appendChild(grid);
+      }
+    }
+
+    function renderTile(p, isExternal) {
+      const attrs = {
+        class: "tile" + (isExternal ? " external" : ""),
+        href: p.href
+      };
+      if (isExternal) { attrs.target = "_blank"; attrs.rel = "noopener"; }
+      return h("a", attrs, [
+        h("div", { class: "tile-icon" }, p.icon || "📄"),
+        h("div", { class: "tile-name" }, p.name),
+        p.sub ? h("div", { class: "tile-sub" }, p.sub) : null
+      ]);
+    }
+
+    function selectCategory(id) {
+      const cat = CATEGORIES.find(c => c.id === id);
+      if (!cat) return;
+      history.replaceState(null, "", "#" + id);
+      renderSidebar(id);
+      renderContent(cat);
+    }
+
+    // initial render: use hash if present, else first category
+    const initialId = location.hash.slice(1);
+    selectCategory(CATEGORIES.some(c => c.id === initialId) ? initialId : CATEGORIES[0].id);
+
+    window.addEventListener("hashchange", () => {
+      const id = location.hash.slice(1);
+      if (CATEGORIES.some(c => c.id === id)) selectCategory(id);
+    });
+  </script>
+</body>
+</html>
