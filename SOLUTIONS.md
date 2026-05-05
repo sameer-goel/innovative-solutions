@@ -16,6 +16,7 @@
 | Project | Category | URL | Source repo | Description |
 |---|---|---|---|---|
 | **Sameer AI Portal** | — (root portal) | [sameerai.com](https://sameerai.com) | [sameerai](https://github.com/sameer-goel/sameerai) | The Digital Consciousness landing page. Acts as the top-level portal linking to all projects in this and sister repos. |
+| **Crisis Support Program** | Misc | [sameer-goel.github.io/crisis-support-program](https://sameer-goel.github.io/crisis-support-program/) | [crisis-support-program](https://github.com/sameer-goel/crisis-support-program) | AI-powered donor-recipient matching platform for government crisis response. One door for those in crisis, one for those ready to help; intelligent matching engine connects them in minutes. |
 | **Meet Sameer** | — (personal) | [meet.sameerai.com](https://meet.sameerai.com/) | [meet](https://github.com/sameer-goel/meet) | Personal landing with sub-apps like LeftBrainRightBrain, CreativitySolutionLab, futureAI, alphadigits, challenges. |
 | **Update Mind Space** | Learn-AI | [updatemind.space](http://updatemind.space/) | [updatemindspace](https://github.com/sameer-goel/updatemindspace) | "Unlock Your Hidden Superpower with AI." Hosts a book reader, button explorations, and learning content. **Flagship content destination.** |
 | **Numerology Gateway** | soul | [sameer-goel.github.io/numerology](https://sameer-goel.github.io/numerology/) | [numerology](https://github.com/sameer-goel/numerology) | Vedic Numerology Calculator using the Chaldean system (based on Harish Johari's book). Computes Psychic, Destiny, and Name numbers. |
@@ -61,7 +62,7 @@ A combined view of internal + external projects. Use this when rendering the ful
 
 #### Misc
 - **Internal**: *(none)*
-- **External**: Life Experiences Dashboard, Dvine Meet, Human Evolution (Canva), Bio Computing (Canva)
+- **External**: Crisis Support Program, Life Experiences Dashboard, Dvine Meet, Human Evolution (Canva), Bio Computing (Canva)
 
 ### 🪷 Inner Intelligence
 
@@ -121,6 +122,10 @@ external_projects:
   - name: Dvine Meet
     url: https://sameer-goel.github.io/divinemeet/
     repo: sameer-goel/divinemeet
+    category: Misc
+  - name: Crisis Support Program
+    url: https://sameer-goel.github.io/crisis-support-program/
+    repo: sameer-goel/crisis-support-program
     category: Misc
   - name: MyAppStore
     url: https://sameer-goel.github.io/MyAppStore/
