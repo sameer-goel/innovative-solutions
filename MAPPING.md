@@ -48,8 +48,8 @@ Catch-all for AI-adjacent projects that don't fit cleanly under Autonomous-AI or
 
 | Project | Source | Destination | Status |
 |---|---|---|---|
-| Brain Gym | `sameer-goel/BrainTrain` (repo, `BrainGym/` subdir) | `mind/brain-gym/` (index.html, assets/, css/, js/, debug.html) | moved (consolidated from separate repo 2026-05-05) |
-| Total Recall | `sameer-goel/total-recall` (repo) | `mind/total-recall/` (index.html, style.css, script.js) | moved (consolidated from separate repo 2026-05-05) |
+| Brain Gym | `sameer-goel/BrainTrain` (former repo, deleted 2026-05-05 after consolidation) | `mind/brain-gym/` (index.html, assets/, css/, js/, debug.html) | moved (repo deleted) |
+| Total Recall | `sameer-goel/total-recall` (former repo, deleted 2026-05-05 after consolidation) | `mind/total-recall/` (index.html, style.css, script.js) | moved (repo deleted) |
 | Binaural Beats (current) | `sameerai/04mind/BinuralBeatsApp.html`, `BinuralBeatsAppLogo.png` | `mind/binaural-beats/index.html`, `logo.png` | moved |
 | Binaural Beats Generator (older iteration) | `sameerai/pages/binuralbeatsgen.html` | `mind/binaural-beats-generator/index.html` | moved |
 | Solfeggio Frequency | `sameerai/04mind/SolfeggioFrequencyApp.html`, `SolfeggioFrequencyAppLogo.png` | `mind/solfeggio-frequency/index.html`, `logo.png` | moved |
