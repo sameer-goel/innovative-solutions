@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Gym - Debug Profile Toggle</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/variants.css">
+    <style>
+        /* Debug styles */
+        body {
+            margin: 0;
+            padding: 0;
+            background: #0f172a;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .debug-info {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background: rgba(0,0,0,0.8);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            z-index: 2000;
+        }
+    </style>
+</head>
+<body>
+    <div class="debug-info">
+        <div>Profile Trigger: <span id="debug-trigger">Not found</span></div>
+        <div>Right Sidebar: <span id="debug-sidebar">Not found</span></div>
+        <div>Sidebar Close: <span id="debug-close">Not found</span></div>
+        <div>Click Count: <span id="debug-clicks">0</span></div>
+    </div>
+
+    <div id="app" class="variant-neural">
+        <!-- User Profile Trigger -->
+        <div class="user-profile-trigger" id="profile-trigger">
+            <div class="user-avatar-trigger"></div>
+        </div>
+
+        <!-- Right Progress Sidebar -->
+        <aside class="right-progress-sidebar" id="right-sidebar">
+            <button class="sidebar-close" id="sidebar-close">
+                <span class="close-icon">×</span>
+            </button>
+            
+            <div class="sidebar-content">
+                <div class="user-profile-header">
+                    <div class="user-avatar-large"></div>
+                    <h3 class="user-name">John Doe</h3>
+                    <p class="user-role">Marketing Specialist</p>
+                </div>
+                
+                <div class="progress-summary">
+                    <h4 class="section-title">Your Progress</h4>
+                    <div class="progress-stats">
+                        <div class="stat-item">
+                            <div class="stat-info">
+                                <span class="stat-value">78</span>
+                                <span class="stat-label">Average Score</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 78%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="homepage-content">
+            <div class="hero-section">
+                <h1 class="hero-title">
+                    <img src="assets/logo-title.svg" alt="Brain Gym Logo" class="hero-logo">
+                    Brain Gym
+                </h1>
+                <p class="hero-subtitle">Debug Profile Toggle</p>
+                <p style="margin-top: 20px; font-size: 16px;">
+                    Look for the profile icon in the top-right corner and click it to test the sidebar.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        let clickCount = 0;
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const profileTrigger = document.getElementById('profile-trigger');
+            const rightSidebar = document.getElementById('right-sidebar');
+            const sidebarClose = document.getElementById('sidebar-close');
+            
+            // Update debug info
+            document.getElementById('debug-trigger').textContent = profileTrigger ? 'Found' : 'Not found';
+            document.getElementById('debug-sidebar').textContent = rightSidebar ? 'Found' : 'Not found';
+            document.getElementById('debug-close').textContent = sidebarClose ? 'Found' : 'Not found';
+            
+            console.log('Profile trigger found:', !!profileTrigger);
+            console.log('Right sidebar found:', !!rightSidebar);
+            console.log('Sidebar close found:', !!sidebarClose);
+            
+            if (profileTrigger && rightSidebar) {
+                console.log('Setting up profile trigger click handler');
+                profileTrigger.addEventListener('click', (e) => {
+                    clickCount++;
+                    document.getElementById('debug-clicks').textContent = clickCount;
+                    console.log('Profile trigger clicked!', clickCount);
+                    e.preventDefault();
+                    e.stopPropagation();
+                    rightSidebar.classList.toggle('open');
+                    profileTrigger.classList.toggle('active');
+                    console.log('Sidebar is now:', rightSidebar.classList.contains('open') ? 'open' : 'closed');
+                });
+            } else {
+                console.error('Profile trigger or sidebar not found!');
+            }
+
+            if (sidebarClose && rightSidebar) {
+                console.log('Setting up sidebar close click handler');
+                sidebarClose.addEventListener('click', (e) => {
+                    console.log('Sidebar close clicked!');
+                    e.preventDefault();
+                    e.stopPropagation();
+                    rightSidebar.classList.remove('open');
+                    if (profileTrigger) profileTrigger.classList.remove('active');
+                });
+            }
+
+            // Close sidebar when clicking outside
+            document.addEventListener('click', (e) => {
+                if (rightSidebar && rightSidebar.classList.contains('open')) {
+                    if (!rightSidebar.contains(e.target) && !profileTrigger.contains(e.target)) {
+                        rightSidebar.classList.remove('open');
+                        if (profileTrigger) profileTrigger.classList.remove('active');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

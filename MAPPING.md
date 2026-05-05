@@ -48,12 +48,14 @@ Catch-all for AI-adjacent projects that don't fit cleanly under Autonomous-AI or
 
 | Project | Source | Destination | Status |
 |---|---|---|---|
+| Brain Gym | `sameer-goel/BrainTrain` (repo, `BrainGym/` subdir) | `mind/brain-gym/` (index.html, assets/, css/, js/, debug.html) | moved (consolidated from separate repo 2026-05-05) |
+| Total Recall | `sameer-goel/total-recall` (repo) | `mind/total-recall/` (index.html, style.css, script.js) | moved (consolidated from separate repo 2026-05-05) |
 | Binaural Beats (current) | `sameerai/04mind/BinuralBeatsApp.html`, `BinuralBeatsAppLogo.png` | `mind/binaural-beats/index.html`, `logo.png` | moved |
 | Binaural Beats Generator (older iteration) | `sameerai/pages/binuralbeatsgen.html` | `mind/binaural-beats-generator/index.html` | moved |
 | Solfeggio Frequency | `sameerai/04mind/SolfeggioFrequencyApp.html`, `SolfeggioFrequencyAppLogo.png` | `mind/solfeggio-frequency/index.html`, `logo.png` | moved |
 | Meditation Game | `sameerai/pages/meditation-game.html` | `mind/meditation-game/index.html` | moved |
 | Meditation Visualization | `sameerai/pages/meditation-visualization.html` | — | retired (0 bytes) |
-| Total Recall | `https://sameer-goel.github.io/total-recall/` | — | link |
+| Total Recall (external) | `https://sameer-goel.github.io/total-recall/` | — | superseded by local copy above |
 | Left Brain Right Brain | `https://meet.sameerai.com/apps/LeftBrainRightBrain.html` | — | link |
 
 ## 💪 body/
@@ -82,10 +84,10 @@ Catch-all for AI-adjacent projects that don't fit cleanly under Autonomous-AI or
 | Autonomous-AI | 1 project (3 files) | 2 | 1 |
 | Learn-AI | 2 | 4 | 0 |
 | Misc | 1 | 2 | 2 |
-| mind | 4 | 2 | 1 |
+| mind | 6 | 1 | 1 |
 | body | 0 | 1 | 0 |
 | soul | 1 | 3 | 0 |
-| **Total** | **9 projects** | **14** | **4** |
+| **Total** | **11 projects** | **13** | **4** |
 
 ## Path fixups applied during the move
 

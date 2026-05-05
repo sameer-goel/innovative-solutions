@@ -4,6 +4,8 @@ A collection of small, self-contained HTML/JavaScript apps by [Sameer Goel](http
 
 Each project lives in its own folder and can be opened directly by loading its `index.html`.
 
+> **For AI agents**: read [`CATEGORIES.md`](CATEGORIES.md) for the taxonomy (where new projects go) and [`SOLUTIONS.md`](SOLUTIONS.md) for the portfolio map of projects hosted outside this repo. Together with this README, those three files are the source of truth for building a unified portfolio view.
+
 ## Categories
 
 ### 🤖 AI

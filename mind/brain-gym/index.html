@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Gym - Cognitive Training</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/variants.css">
+    <link rel="stylesheet" href="css/stroop.css">
+</head>
+
+<body>
+
+
+    <!-- Main Application Container -->
+    <div id="app" class="variant-neural">
+        <!-- User Profile Trigger -->
+        <div class="user-profile-trigger" id="profile-trigger">
+            <div class="user-avatar-trigger"></div>
+        </div>
+
+        <!-- Right Progress Sidebar -->
+        <aside class="right-progress-sidebar" id="right-sidebar">
+            <button class="sidebar-close" id="sidebar-close">
+                <span class="close-icon">×</span>
+            </button>
+
+            <div class="sidebar-content">
+                <div class="user-profile-header">
+                    <div class="user-avatar-large"></div>
+                    <h3 class="user-name">Sameer Goel</h3>
+                    <p class="user-role">AI Architect</p>
+                </div>
+
+                <div class="progress-summary">
+                    <h4 class="section-title">Your Progress</h4>
+                    <div class="progress-stats">
+                        <div class="stat-item">
+                            <div class="stat-info">
+                                <span class="stat-value">78</span>
+                                <span class="stat-label">Average Score</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 78%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-info">
+                                <span class="stat-value">45</span>
+                                <span class="stat-label">Sessions Completed</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-info">
+                                <span class="stat-value">+23%</span>
+                                <span class="stat-label">Growth This Month</span>
+                            </div>
+                            <div class="stat-bar">
+                                <div class="stat-fill" style="width: 60%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="recent-activity">
+                    <h4 class="section-title">Recent Activity</h4>
+                    <div class="activity-list">
+                        <div class="activity-item">
+                            <div class="activity-icon focus-icon">🎯</div>
+                            <div class="activity-info">
+                                <span class="activity-name">Focus Training</span>
+                                <span class="activity-time">2 hours ago</span>
+                            </div>
+                            <div class="activity-score">+5%</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon memory-icon">🧠</div>
+                            <div class="activity-info">
+                                <span class="activity-name">Memory Challenge</span>
+                                <span class="activity-time">1 day ago</span>
+                            </div>
+                            <div class="activity-score">+8%</div>
+                        </div>
+                        <div class="activity-item">
+                            <div class="activity-icon logic-icon">🧩</div>
+                            <div class="activity-info">
+                                <span class="activity-name">Logic Puzzle</span>
+                                <span class="activity-time">2 days ago</span>
+                            </div>
+                            <div class="activity-score">+3%</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="achievements">
+                    <h4 class="section-title">Achievements</h4>
+                    <div class="achievement-badges">
+                        <div class="badge earned">🏆</div>
+                        <div class="badge earned">🎯</div>
+                        <div class="badge earned">🧠</div>
+                        <div class="badge locked">🔒</div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Homepage Content -->
+        <main class="homepage-content">
+            <!-- Hero Section -->
+            <div class="hero-section">
+                <h1 class="hero-title">Brain Gym</h1>
+                <p class="hero-subtitle">Neuroscience Backed Brain Exercises</p>
+            </div>
+
+            <!-- Brain Exercise Categories -->
+            <div class="categories-section">
+                <!-- <h4 class="categories-title">Brain Workout Menu</h4> -->
+                <div class="categories-grid">
+                    <!-- Focus Category -->
+                    <div class="category-card" data-category="focus">
+                        <div class="category-icon focus-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <circle cx="12" cy="12" r="6"></circle>
+                                <circle cx="12" cy="12" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Focus</h3>
+                        <p class="category-desc">Improve attention and concentration</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                            <span class="progress-text">75% Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Memory Category -->
+                    <div class="category-card" data-category="memory">
+                        <div class="category-icon memory-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z">
+                                </path>
+                                <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                                <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Memory</h3>
+                        <p class="category-desc">Enhance recall and retention abilities</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 60%"></div>
+                            </div>
+                            <span class="progress-text">60% Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Logic Category -->
+                    <div class="category-card" data-category="logic">
+                        <div class="category-icon logic-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2a10 10 0 0 0-7.53 16.59l1.42-1.42A8 8 0 1 1 12 4z" />
+                                <path d="M12 2v4" />
+                                <path d="m6.41 3.4-2 3.46" />
+                                <path d="M3.4 10.41 0 12" />
+                                <path d="m3.4 13.59 3.46 2" />
+                                <path d="M10.41 20.6l-3.46 2L12 22" />
+                                <path d="m13.59 20.6-2-3.46" />
+                                <path d="m20.6 13.59-3.46-2L22 12" />
+                                <path d="m20.6 10.41 2-3.46L12 2" />
+                                <path d="M12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8z" />
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Logic</h3>
+                        <p class="category-desc">Sharpen reasoning and problem-solving</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 45%"></div>
+                            </div>
+                            <span class="progress-text">45% Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Music Category -->
+                    <div class="category-card" data-category="music">
+                        <div class="category-icon music-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M9 18V5l12-2v13" />
+                                <circle cx="6" cy="18" r="3" />
+                                <circle cx="18" cy="16" r="3" />
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Music</h3>
+                        <p class="category-desc">Train auditory skills and rhythm</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 30%"></div>
+                            </div>
+                            <span class="progress-text">30% Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Maths Category -->
+                    <div class="category-card" data-category="maths">
+                        <div class="category-icon maths-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M9 3H5a2 2 0 0 0-2 2v4m6-6h2a2 2 0 0 1 2 2v2m-6 6v2a2 2 0 0 0 2 2h2m6-6v4a2 2 0 0 1-2 2h-4m0-12v12" />
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Maths</h3>
+                        <p class="category-desc">Boost numerical and quantitative skills</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 55%"></div>
+                            </div>
+                            <span class="progress-text">55% Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Language Category -->
+                    <div class="category-card" data-category="language">
+                        <div class="category-icon language-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Language</h3>
+                        <p class="category-desc">Expand vocabulary and verbal skills</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 40%"></div>
+                            </div>
+                            <span class="progress-text">40% Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Problem Solving Category -->
+                    <div class="category-card" data-category="problem-solving">
+                        <div class="category-icon problem-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" />
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Problem Solving</h3>
+                        <p class="category-desc">Apply strategic thinking to challenges</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 35%"></div>
+                            </div>
+                            <span class="progress-text">35% Complete</span>
+                        </div>
+                    </div>
+
+                    <!-- Emotional Intelligence Category -->
+                    <div class="category-card" data-category="emotional-intelligence">
+                        <div class="category-icon emotional-icon">
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <h3 class="category-name">Emotional Intelligence</h3>
+                        <p class="category-desc">Develop emotional awareness and empathy</p>
+                        <div class="category-progress">
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 25%"></div>
+                            </div>
+                            <span class="progress-text">25% Complete</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/mockData.js"></script>
+    <script src="js/cognitiveTests.js"></script>
+    <script src="js/tests/focus/stroopTest.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>

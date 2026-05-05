@@ -1,0 +1,1136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookQuiz - Master What You Read</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="app">
+        <!-- Landing Page -->
+        <div id="landing" class="screen active">
+            <header>
+                <div class="header-content">
+                    <div class="logo" onclick="showScreen('landing')">
+                        <i class="fas fa-home"></i>
+                        <span>📚 BookQuiz</span>
+                    </div>
+                    <p>Master what you read through active recall</p>
+                </div>
+                <div class="header-actions">
+                    <button class="login-btn" onclick="showScreen('login')">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+                </div>
+            </header>
+
+
+
+            <div class="books-showcase">
+                <h2>Master Your Favorite Books</h2>
+                <p class="showcase-subtitle">Test your understanding through active recall and spaced repetition</p>
+
+                <div class="books-grid-home">
+                    <div class="book-card-home" onclick="promptLogin('rich-dad')">
+                        <div class="book-cover rich-dad">
+                            <div class="book-icon"><i class="fas fa-dollar-sign"></i></div>
+                            <div class="book-title">Rich Dad Poor Dad</div>
+                        </div>
+                        <h3>Rich Dad Poor Dad</h3>
+                        <p class="author">Robert Kiyosaki</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 1.2k learners</span>
+                        </div>
+                        <div class="category-badge finance">Finance</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('atomic-habits')">
+                        <div class="book-cover atomic-habits">
+                            <div class="book-icon"><i class="fas fa-atom"></i></div>
+                            <div class="book-title">Atomic Habits</div>
+                        </div>
+                        <h3>Atomic Habits</h3>
+                        <p class="author">James Clear</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 2.1k learners</span>
+                        </div>
+                        <div class="category-badge self-improvement">Self-Improvement</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('thinking-fast')">
+                        <div class="book-cover thinking-fast">
+                            <div class="book-icon"><i class="fas fa-brain"></i></div>
+                            <div class="book-title">Thinking Fast & Slow</div>
+                        </div>
+                        <h3>Thinking, Fast and Slow</h3>
+                        <p class="author">Daniel Kahneman</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 890 learners</span>
+                        </div>
+                        <div class="category-badge psychology">Psychology</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('mindset')">
+                        <div class="book-cover mindset">
+                            <div class="book-icon"><i class="fas fa-seedling"></i></div>
+                            <div class="book-title">Mindset</div>
+                        </div>
+                        <h3>Mindset</h3>
+                        <p class="author">Carol Dweck</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 750 learners</span>
+                        </div>
+                        <div class="category-badge psychology">Psychology</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('sapiens')">
+                        <div class="book-cover sapiens">
+                            <div class="book-icon"><i class="fas fa-globe"></i></div>
+                            <div class="book-title">Sapiens</div>
+                        </div>
+                        <h3>Sapiens</h3>
+                        <p class="author">Yuval Noah Harari</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 1.5k learners</span>
+                        </div>
+                        <div class="category-badge history">History</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('deep-work')">
+                        <div class="book-cover deep-work">
+                            <div class="book-icon"><i class="fas fa-bullseye"></i></div>
+                            <div class="book-title">Deep Work</div>
+                        </div>
+                        <h3>Deep Work</h3>
+                        <p class="author">Cal Newport</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 980 learners</span>
+                        </div>
+                        <div class="category-badge productivity">Productivity</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('psychology-money')">
+                        <div class="book-cover psychology-money">
+                            <div class="book-icon"><i class="fas fa-chart-line"></i></div>
+                            <div class="book-title">Psychology of Money</div>
+                        </div>
+                        <h3>Psychology of Money</h3>
+                        <p class="author">Morgan Housel</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 1.1k learners</span>
+                        </div>
+                        <div class="category-badge finance">Finance</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('power-now')">
+                        <div class="book-cover power-now">
+                            <div class="book-icon"><i class="fas fa-om"></i></div>
+                            <div class="book-title">The Power of Now</div>
+                        </div>
+                        <h3>The Power of Now</h3>
+                        <p class="author">Eckhart Tolle</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 650 learners</span>
+                        </div>
+                        <div class="category-badge mindfulness">Mindfulness</div>
+                    </div>
+
+                    <!-- NEUROSCIENCE BOOKS -->
+                    <div class="book-card-home" onclick="promptLogin('behave')">
+                        <div class="book-cover behave">
+                            <div class="book-icon"><i class="fas fa-brain"></i></div>
+                            <div class="book-title">Behave</div>
+                        </div>
+                        <h3>Behave</h3>
+                        <p class="author">Robert Sapolsky</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 420 learners</span>
+                        </div>
+                        <div class="category-badge neuroscience">Neuroscience</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('predictably-irrational')">
+                        <div class="book-cover predictably-irrational">
+                            <div class="book-icon"><i class="fas fa-head-side-virus"></i></div>
+                            <div class="book-title">Predictably Irrational</div>
+                        </div>
+                        <h3>Predictably Irrational</h3>
+                        <p class="author">Dan Ariely</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 680 learners</span>
+                        </div>
+                        <div class="category-badge neuroscience">Neuroscience</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('brain-that-changes')">
+                        <div class="book-cover brain-that-changes">
+                            <div class="book-icon"><i class="fas fa-brain"></i></div>
+                            <div class="book-title">The Brain That Changes Itself</div>
+                        </div>
+                        <h3>The Brain That Changes Itself</h3>
+                        <p class="author">Norman Doidge</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 340 learners</span>
+                        </div>
+                        <div class="category-badge neuroscience">Neuroscience</div>
+                    </div>
+
+                    <!-- AI BOOKS -->
+                    <div class="book-card-home" onclick="promptLogin('life-3-0')">
+                        <div class="book-cover life-3-0">
+                            <div class="book-icon"><i class="fas fa-robot"></i></div>
+                            <div class="book-title">Life 3.0</div>
+                        </div>
+                        <h3>Life 3.0</h3>
+                        <p class="author">Max Tegmark</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 1.2k learners</span>
+                        </div>
+                        <div class="category-badge ai">Artificial Intelligence</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('human-compatible')">
+                        <div class="book-cover human-compatible">
+                            <div class="book-icon"><i class="fas fa-handshake"></i></div>
+                            <div class="book-title">Human Compatible</div>
+                        </div>
+                        <h3>Human Compatible</h3>
+                        <p class="author">Stuart Russell</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 890 learners</span>
+                        </div>
+                        <div class="category-badge ai">Artificial Intelligence</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('prompt-engineering-guide')">
+                        <div class="book-cover prompt-engineering-guide">
+                            <div class="book-icon"><i class="fas fa-code"></i></div>
+                            <div class="book-title">Prompt Engineering Guide</div>
+                        </div>
+                        <h3>The Prompt Engineering Guide</h3>
+                        <p class="author">Various Contributors</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 2.3k learners</span>
+                        </div>
+                        <div class="category-badge ai-eng">AI Engineering</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('generative-ai-handbook')">
+                        <div class="book-cover generative-ai-handbook">
+                            <div class="book-icon"><i class="fas fa-magic"></i></div>
+                            <div class="book-title">Generative AI Handbook</div>
+                        </div>
+                        <h3>Generative AI Handbook</h3>
+                        <p class="author">Multiple Authors</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 1.8k learners</span>
+                        </div>
+                        <div class="category-badge ai-eng">AI Engineering</div>
+                    </div>
+
+                    <div class="book-card-home" onclick="promptLogin('agentic-ai-systems')">
+                        <div class="book-cover agentic-ai-systems">
+                            <div class="book-icon"><i class="fas fa-cogs"></i></div>
+                            <div class="book-title">Agentic AI Systems</div>
+                        </div>
+                        <h3>Agentic AI Systems</h3>
+                        <p class="author">Research Collective</p>
+                        <div class="book-stats">
+                            <span><i class="fas fa-question-circle"></i> 5 concepts</span>
+                            <span><i class="fas fa-users"></i> 950 learners</span>
+                        </div>
+                        <div class="category-badge ai-eng">AI Engineering</div>
+                    </div>
+                </div>
+
+                <div class="view-all-section">
+                    <button class="view-all-btn" onclick="showScreen('login')">
+                        <i class="fas fa-book-open"></i> Start Learning - View All Books
+                    </button>
+                </div>
+            </div>
+
+            <div class="recent-badges-preview">
+                <h3>Recent Community Achievements</h3>
+                <div class="community-badges">
+                    <div class="community-badge gold">
+                        <i class="fas fa-brain"></i>
+                        <span>Deep Thinker</span>
+                        <small>Sarah K. earned this</small>
+                    </div>
+                    <div class="community-badge silver">
+                        <i class="fas fa-fire"></i>
+                        <span>Streak Master</span>
+                        <small>Mike J. earned this</small>
+                    </div>
+                    <div class="community-badge bronze">
+                        <i class="fas fa-bolt"></i>
+                        <span>Speed Learner</span>
+                        <small>Emma D. earned this</small>
+                    </div>
+                </div>
+            </div>
+
+            <div class="learning-science-section">
+                <h2>Why This Method Works</h2>
+                <div class="science-cards">
+                    <div class="science-card">
+                        <div class="science-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3>Active Recall</h3>
+                        <p>Testing yourself is 2x more effective than passive reading. When you actively retrieve
+                            information from memory, you strengthen neural pathways and improve long-term retention.</p>
+                        <div class="science-tip">
+                            <strong>💡 Tip:</strong> Don't just re-read chapters. Quiz yourself on key concepts without
+                            looking at the book first.
+                        </div>
+                    </div>
+
+                    <div class="science-card">
+                        <div class="science-icon">
+                            <i class="fas fa-repeat"></i>
+                        </div>
+                        <h3>Spaced Repetition</h3>
+                        <p>Reviewing concepts at increasing intervals fights the "forgetting curve." Our system reminds
+                            you to revisit topics just before you're likely to forget them.</p>
+                        <div class="science-tip">
+                            <strong>💡 Tip:</strong> Review difficult concepts more frequently. Easy concepts can be
+                            spaced further apart.
+                        </div>
+                    </div>
+
+                    <div class="science-card">
+                        <div class="science-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <h3>Gamification</h3>
+                        <p>Badges, streaks, and leaderboards trigger dopamine release, making learning addictive.
+                            Progress visualization keeps you motivated to continue your learning journey.</p>
+                        <div class="science-tip">
+                            <strong>💡 Tip:</strong> Set small daily goals. A 5-minute quiz session is better than
+                            cramming for hours once a week.
+                        </div>
+                    </div>
+
+                    <div class="science-card">
+                        <div class="science-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>Immediate Feedback</h3>
+                        <p>Learning from mistakes immediately prevents misconceptions from solidifying. Our detailed
+                            explanations help you understand not just what's correct, but why.</p>
+                        <div class="science-tip">
+                            <strong>💡 Tip:</strong> Read every explanation, even for questions you got right. You might
+                            discover new insights.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="research-backing">
+                    <h3>📚 Research-Backed Learning</h3>
+                    <p>This approach is based on decades of cognitive science research from institutions like Harvard,
+                        MIT, and Stanford. Studies show that active recall can improve retention by up to 200% compared
+                        to passive reading.</p>
+                </div>
+            </div>
+
+            <div class="cta-section">
+                <button class="cta-button" onclick="showScreen('login')">
+                    <i class="fas fa-rocket"></i> Start Learning Today
+                </button>
+                <p class="cta-subtitle">Join thousands of learners mastering their favorite books</p>
+            </div>
+
+            <div class="stats-preview bottom-stats">
+                <div class="stat">
+                    <span class="number">4,250</span>
+                    <span class="label">Concepts Mastered</span>
+                </div>
+                <div class="stat">
+                    <span class="number">320</span>
+                    <span class="label">Active Learners</span>
+                </div>
+                <div class="stat">
+                    <span class="number">16</span>
+                    <span class="label">Books Available</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Login Screen -->
+        <div id="login" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <div class="login-container">
+                <div class="login-header">
+                    <h2><i class="fas fa-sign-in-alt"></i> Welcome Back</h2>
+                    <p>Login to continue your learning journey</p>
+                </div>
+
+                <div class="login-form">
+                    <div class="demo-notice">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Demo Login: <strong>user</strong> / <strong>pass</strong></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-username">
+                            <i class="fas fa-user"></i> Username
+                        </label>
+                        <input type="text" id="login-username" placeholder="Enter username" value="user">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="login-password">
+                            <i class="fas fa-lock"></i> Password
+                        </label>
+                        <input type="password" id="login-password" placeholder="Enter password" value="pass">
+                    </div>
+
+                    <button class="login-submit-btn" onclick="handleLogin()">
+                        <i class="fas fa-sign-in-alt"></i> Login
+                    </button>
+
+                    <div class="login-error hidden" id="login-error">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        Invalid credentials. Use: user / pass
+                    </div>
+                </div>
+
+                <button class="nav-button secondary" onclick="showScreen('landing')">
+                    <i class="fas fa-arrow-left"></i> Back to Home
+                </button>
+            </div>
+        </div>
+
+        <!-- Profile Setup -->
+        <div id="setup" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <div class="setup-header">
+                <h2>Welcome to BookQuiz! 👋</h2>
+                <p>Let's set up your learning profile</p>
+            </div>
+
+            <div class="setup-form">
+                <div class="form-group">
+                    <label for="username">What should we call you?</label>
+                    <input type="text" id="username" placeholder="Enter your name" maxlength="20">
+                </div>
+
+                <div class="form-group">
+                    <label>Choose your learning goal:</label>
+                    <div class="goal-options">
+                        <button class="goal-btn" data-goal="casual" onclick="selectGoal('casual')">
+                            <span class="goal-icon"><i class="fas fa-book-open"></i></span>
+                            <span class="goal-title">Casual Reader</span>
+                            <span class="goal-desc">1-2 books per month</span>
+                        </button>
+                        <button class="goal-btn" data-goal="focused" onclick="selectGoal('focused')">
+                            <span class="goal-icon"><i class="fas fa-crosshairs"></i></span>
+                            <span class="goal-title">Focused Learner</span>
+                            <span class="goal-desc">Deep understanding</span>
+                        </button>
+                        <button class="goal-btn" data-goal="speed" onclick="selectGoal('speed')">
+                            <span class="goal-icon"><i class="fas fa-rocket"></i></span>
+                            <span class="goal-title">Speed Learner</span>
+                            <span class="goal-desc">Quick concepts</span>
+                        </button>
+                    </div>
+                </div>
+
+                <button class="setup-complete-btn" onclick="completeSetup()" disabled>Complete Setup</button>
+            </div>
+        </div>
+
+        <!-- User Profile -->
+        <div id="profile" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <div class="profile-header">
+                <div class="avatar">👤</div>
+                <div class="user-info">
+                    <h2>Alex Chen</h2>
+                    <p>Learning Streak: 12 days 🔥</p>
+                </div>
+                <div class="level-badge">Level 7</div>
+            </div>
+
+            <div class="daily-tip">
+                <div class="tip-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Today's Learning Tip</span>
+                </div>
+                <div class="tip-content" id="daily-tip-content">
+                    <p><strong>Active Recall in Action:</strong> Before starting a quiz, spend 30 seconds trying to
+                        recall what you remember about the book. This "pre-test" primes your brain for better learning.
+                    </p>
+                </div>
+            </div>
+
+            <div class="badges-section">
+                <h3>Recent Badges</h3>
+                <div class="badges">
+                    <div class="badge earned gold">
+                        <i class="fas fa-brain"></i>
+                        <span>Deep Thinker</span>
+                    </div>
+                    <div class="badge earned silver">
+                        <i class="fas fa-bolt"></i>
+                        <span>Speed Learner</span>
+                    </div>
+                    <div class="badge earned bronze">
+                        <i class="fas fa-bullseye"></i>
+                        <span>Concept Master</span>
+                    </div>
+                    <div class="badge earned purple">
+                        <i class="fas fa-fire"></i>
+                        <span>Streak Master</span>
+                    </div>
+                    <div class="badge earned blue">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Knowledge Seeker</span>
+                    </div>
+                    <div class="badge locked">
+                        <i class="fas fa-trophy"></i>
+                        <span>Book Crusher</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-button" onclick="showScreen('books')">Choose a Book</button>
+            <button class="nav-button secondary" onclick="showScreen('leaderboard')">View Leaderboard</button>
+        </div>
+
+        <!-- Learning Tips Screen -->
+        <div id="learning-tips" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <div class="tips-header">
+                <h2><i class="fas fa-graduation-cap"></i> Master Active Recall</h2>
+                <p>Evidence-based techniques to maximize your learning</p>
+            </div>
+
+            <div class="tips-grid">
+                <div class="tip-card">
+                    <div class="tip-number">1</div>
+                    <h3>The Testing Effect</h3>
+                    <p>Quiz yourself frequently, even before you feel ready. Testing strengthens memory more than
+                        reviewing notes.</p>
+                    <div class="tip-example">
+                        <strong>Try this:</strong> After reading a chapter, close the book and write down everything you
+                        remember.
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">2</div>
+                    <h3>Embrace Difficulty</h3>
+                    <p>Struggling to recall information actually strengthens learning. Don't give up too quickly on hard
+                        questions.</p>
+                    <div class="tip-example">
+                        <strong>Try this:</strong> Spend at least 10 seconds trying to recall before looking at answer
+                        choices.
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">3</div>
+                    <h3>Space Your Practice</h3>
+                    <p>Review concepts at increasing intervals: 1 day, 3 days, 1 week, 2 weeks, 1 month.</p>
+                    <div class="tip-example">
+                        <strong>Try this:</strong> Set calendar reminders to revisit completed quizzes at spaced
+                        intervals.
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">4</div>
+                    <h3>Interleave Topics</h3>
+                    <p>Mix different concepts in your practice sessions rather than focusing on one topic at a time.</p>
+                    <div class="tip-example">
+                        <strong>Try this:</strong> Take quizzes from different books in the same session.
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">5</div>
+                    <h3>Explain to Learn</h3>
+                    <p>After answering a question, try explaining the concept in your own words as if teaching someone
+                        else.</p>
+                    <div class="tip-example">
+                        <strong>Try this:</strong> Record voice memos explaining key concepts after each quiz.
+                    </div>
+                </div>
+
+                <div class="tip-card">
+                    <div class="tip-number">6</div>
+                    <h3>Track Your Progress</h3>
+                    <p>Monitor which concepts you struggle with and focus extra attention on those areas.</p>
+                    <div class="tip-example">
+                        <strong>Try this:</strong> Keep a learning journal noting which topics need more practice.
+                    </div>
+                </div>
+            </div>
+
+            <div class="research-section">
+                <h3>🔬 The Science Behind It</h3>
+                <div class="research-facts">
+                    <div class="fact">
+                        <i class="fas fa-chart-line"></i>
+                        <span><strong>200% improvement</strong> in retention with active recall vs. passive
+                            reading</span>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-clock"></i>
+                        <span><strong>50% less time</strong> needed to achieve the same learning outcomes</span>
+                    </div>
+                    <div class="fact">
+                        <i class="fas fa-brain"></i>
+                        <span><strong>Stronger neural pathways</strong> formed through retrieval practice</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-button secondary" onclick="showScreen('profile')">Back to Profile</button>
+        </div>
+
+        <!-- Book Selection -->
+        <div id="books" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <h2>Choose Your Book</h2>
+            <div class="books-grid">
+                <div class="book-card" onclick="selectBook('rich-dad')">
+                    <div class="book-cover rich-dad">
+                        <div class="book-icon"><i class="fas fa-dollar-sign"></i></div>
+                        <div class="book-title">Rich Dad Poor Dad</div>
+                    </div>
+                    <h3>Rich Dad Poor Dad</h3>
+                    <div class="book-author">Robert Kiyosaki</div>
+                    <div class="category-badge finance">Finance</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 60%"></div>
+                        <span>3/5 concepts mastered</span>
+                    </div>
+                </div>
+
+                <div class="book-card" onclick="selectBook('thinking-fast')">
+                    <div class="book-cover thinking-fast">
+                        <div class="book-icon"><i class="fas fa-brain"></i></div>
+                        <div class="book-title">Thinking Fast & Slow</div>
+                    </div>
+                    <h3>Thinking, Fast and Slow</h3>
+                    <div class="book-author">Daniel Kahneman</div>
+                    <div class="category-badge psychology">Psychology</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 40%"></div>
+                        <span>2/5 concepts mastered</span>
+                    </div>
+                </div>
+
+                <div class="book-card" onclick="selectBook('atomic-habits')">
+                    <div class="book-cover atomic-habits">
+                        <div class="book-icon"><i class="fas fa-atom"></i></div>
+                        <div class="book-title">Atomic Habits</div>
+                    </div>
+                    <h3>Atomic Habits</h3>
+                    <div class="book-author">James Clear</div>
+                    <div class="category-badge self-improvement">Self-Improvement</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 80%"></div>
+                        <span>4/5 concepts mastered</span>
+                    </div>
+                </div>
+
+                <div class="book-card" onclick="selectBook('mindset')">
+                    <div class="book-cover mindset">
+                        <div class="book-icon"><i class="fas fa-seedling"></i></div>
+                        <div class="book-title">Mindset</div>
+                    </div>
+                    <h3>Mindset</h3>
+                    <div class="book-author">Carol Dweck</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 20%"></div>
+                        <span>1/5 concepts mastered</span>
+                    </div>
+                </div>
+
+                <div class="book-card" onclick="selectBook('sapiens')">
+                    <div class="book-cover sapiens">
+                        <div class="book-icon"><i class="fas fa-globe"></i></div>
+                        <div class="book-title">Sapiens</div>
+                    </div>
+                    <h3>Sapiens</h3>
+                    <div class="book-author">Yuval Noah Harari</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                        <span>0/5 concepts mastered</span>
+                    </div>
+                </div>
+
+                <div class="book-card" onclick="selectBook('deep-work')">
+                    <div class="book-cover deep-work">
+                        <div class="book-icon"><i class="fas fa-bullseye"></i></div>
+                        <div class="book-title">Deep Work</div>
+                    </div>
+                    <h3>Deep Work</h3>
+                    <div class="book-author">Cal Newport</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 60%"></div>
+                        <span>3/5 concepts mastered</span>
+                    </div>
+                </div>
+
+                <div class="book-card" onclick="selectBook('psychology-money')">
+                    <div class="book-cover psychology-money">
+                        <div class="book-icon"><i class="fas fa-chart-line"></i></div>
+                        <div class="book-title">Psychology of Money</div>
+                    </div>
+                    <h3>Psychology of Money</h3>
+                    <div class="book-author">Morgan Housel</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 40%"></div>
+                        <span>2/5 concepts mastered</span>
+                    </div>
+                </div>
+
+                <div class="book-card" onclick="selectBook('power-now')">
+                    <div class="book-cover power-now">
+                        <div class="book-icon"><i class="fas fa-om"></i></div>
+                        <div class="book-title">The Power of Now</div>
+                    </div>
+                    <h3>The Power of Now</h3>
+                    <div class="book-author">Eckhart Tolle</div>
+                    <div class="progress">
+                        <div class="progress-bar" style="width: 0%"></div>
+                        <span>0/5 concepts mastered</span>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav-button secondary" onclick="showScreen('profile')">Back to Profile</button>
+        </div>
+
+        <!-- Quiz Interface -->
+        <div id="quiz" class="screen">
+            <div class="quiz-header">
+                <div class="quiz-top-bar">
+                    <div class="logo-nav" onclick="showScreen('landing')">
+                        <i class="fas fa-home"></i>
+                        <span>📚 BookQuiz</span>
+                    </div>
+                    <button class="quit-quiz-btn" onclick="confirmQuitQuiz()">
+                        <i class="fas fa-times"></i> Quit Quiz
+                    </button>
+                </div>
+
+                <div class="book-info">
+                    <div class="book-title-section">
+                        <span id="current-book">Rich Dad Poor Dad</span>
+                        <span id="current-author">Robert Kiyosaki</span>
+                    </div>
+                    <div class="quiz-progress">
+                        <span id="question-counter">Question 1 of 5</span>
+                        <div class="progress-bar-container">
+                            <div class="progress-bar" id="quiz-progress" style="width: 20%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="quiz-stats">
+                    <div class="stat-item">
+                        <span class="stat-value" id="current-score">0</span>
+                        <span class="stat-label">Correct</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-value" id="time-elapsed">0:00</span>
+                        <span class="stat-label">Time</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <h3 id="question-text">What is the key difference between assets and liabilities according to Kiyosaki?
+                </h3>
+
+                <div class="answers" id="answers">
+                    <button class="answer-btn" onclick="selectAnswer(0)">Assets put money in your pocket, liabilities
+                        take money out</button>
+                    <button class="answer-btn" onclick="selectAnswer(1)">Assets are expensive, liabilities are
+                        cheap</button>
+                    <button class="answer-btn" onclick="selectAnswer(2)">Assets are physical, liabilities are
+                        digital</button>
+                    <button class="answer-btn" onclick="selectAnswer(3)">There is no real difference</button>
+                </div>
+
+                <div id="feedback" class="feedback hidden">
+                    <div class="feedback-content">
+                        <span class="feedback-icon">✅</span>
+                        <p><strong>Correct!</strong> Assets generate income and put money in your pocket, while
+                            liabilities take money out. This is the foundation of building wealth.</p>
+                    </div>
+                    <button class="next-btn" onclick="nextQuestion()">Next Question</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Results -->
+        <div id="results" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <div class="results-header">
+                <h2>Quiz Complete! 🎉</h2>
+                <div class="score-circle">
+                    <span class="score">4/5</span>
+                    <span class="percentage">80%</span>
+                </div>
+            </div>
+
+            <div class="results-details">
+                <div class="badge-earned">
+                    <span class="badge-icon"><i class="fas fa-medal"></i></span>
+                    <span>New Badge: Concept Master!</span>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="stat">
+                        <span class="number">+50</span>
+                        <span class="label">XP Earned</span>
+                    </div>
+                    <div class="stat">
+                        <span class="number">12</span>
+                        <span class="label">Day Streak</span>
+                    </div>
+                </div>
+
+                <div class="next-review">
+                    <p>💡 Next review in 3 days for optimal retention</p>
+                </div>
+            </div>
+
+            <button class="nav-button" onclick="showScreen('books')">Try Another Book</button>
+            <button class="nav-button secondary" onclick="showScreen('leaderboard')">View Leaderboard</button>
+        </div>
+
+        <!-- Leaderboard -->
+        <div id="leaderboard" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <h2>Community Leaderboard</h2>
+
+            <div class="leaderboard-tabs">
+                <button class="tab active" onclick="showLeaderboard('weekly')">This Week</button>
+                <button class="tab" onclick="showLeaderboard('alltime')">All Time</button>
+            </div>
+
+            <div class="leaderboard-list">
+                <div class="leaderboard-item rank-1">
+                    <span class="rank gold-medal"><i class="fas fa-medal"></i></span>
+                    <div class="user">
+                        <span class="name">Sarah Kim</span>
+                        <span class="level"><i class="fas fa-star"></i> Level 12</span>
+                    </div>
+                    <span class="score">2,847 XP</span>
+                </div>
+
+                <div class="leaderboard-item rank-2">
+                    <span class="rank silver-medal"><i class="fas fa-medal"></i></span>
+                    <div class="user">
+                        <span class="name">Mike Johnson</span>
+                        <span class="level"><i class="fas fa-star"></i> Level 10</span>
+                    </div>
+                    <span class="score">2,156 XP</span>
+                </div>
+
+                <div class="leaderboard-item rank-3">
+                    <span class="rank bronze-medal"><i class="fas fa-medal"></i></span>
+                    <div class="user">
+                        <span class="name">Emma Davis</span>
+                        <span class="level"><i class="fas fa-star"></i> Level 9</span>
+                    </div>
+                    <span class="score">1,923 XP</span>
+                </div>
+
+                <div class="leaderboard-item current-user">
+                    <span class="rank">7</span>
+                    <div class="user">
+                        <span class="name">Alex Chen (You)</span>
+                        <span class="level"><i class="fas fa-star"></i> Level 7</span>
+                    </div>
+                    <span class="score">1,456 XP</span>
+                </div>
+            </div>
+
+            <button class="nav-button secondary" onclick="showScreen('profile')">Back to Profile</button>
+        </div>
+
+        <!-- Study Lessons Screen -->
+        <div id="lessons" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <div class="lessons-header">
+                <div class="book-info-header">
+                    <div class="book-cover thinking-fast small">
+                        <div class="book-icon"><i class="fas fa-brain"></i></div>
+                        <div class="book-title">Thinking Fast & Slow</div>
+                    </div>
+                    <div class="book-details">
+                        <h2>Study Lessons</h2>
+                        <p class="author">Daniel Kahneman</p>
+                        <p class="description">Master the concepts of behavioral economics and cognitive psychology
+                            through structured lessons</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lessons-grid">
+                <div class="lesson-card" onclick="openLesson(1)">
+                    <div class="lesson-number">1</div>
+                    <div class="lesson-content">
+                        <h3>The Characters of the Story</h3>
+                        <p class="lesson-summary">Introduction to System 1 and System 2 thinking - the fast, intuitive
+                            mind vs. the slow, deliberate mind.</p>
+                        <div class="lesson-meta">
+                            <span><i class="fas fa-clock"></i> 15 min read</span>
+                            <span><i class="fas fa-tasks"></i> 3 exercises</span>
+                        </div>
+                        <div class="lesson-status completed">
+                            <i class="fas fa-check-circle"></i> Completed
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card" onclick="openLesson(2)">
+                    <div class="lesson-number">2</div>
+                    <div class="lesson-content">
+                        <h3>Attention and Effort</h3>
+                        <p class="lesson-summary">How mental effort works, the limits of attention, and why multitasking
+                            is largely a myth.</p>
+                        <div class="lesson-meta">
+                            <span><i class="fas fa-clock"></i> 18 min read</span>
+                            <span><i class="fas fa-tasks"></i> 4 exercises</span>
+                        </div>
+                        <div class="lesson-status current">
+                            <i class="fas fa-play-circle"></i> Current
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card locked" onclick="showLockedMessage()">
+                    <div class="lesson-number">3</div>
+                    <div class="lesson-content">
+                        <h3>The Lazy Controller</h3>
+                        <p class="lesson-summary">Understanding cognitive ease, mental shortcuts, and why our brains
+                            prefer the path of least resistance.</p>
+                        <div class="lesson-meta">
+                            <span><i class="fas fa-clock"></i> 20 min read</span>
+                            <span><i class="fas fa-tasks"></i> 5 exercises</span>
+                        </div>
+                        <div class="lesson-status locked">
+                            <i class="fas fa-lock"></i> Complete Lesson 2 to unlock
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card locked" onclick="showLockedMessage()">
+                    <div class="lesson-number">4</div>
+                    <div class="lesson-content">
+                        <h3>The Associative Machine</h3>
+                        <p class="lesson-summary">How memory works, priming effects, and the automatic associations that
+                            shape our thoughts.</p>
+                        <div class="lesson-meta">
+                            <span><i class="fas fa-clock"></i> 22 min read</span>
+                            <span><i class="fas fa-tasks"></i> 4 exercises</span>
+                        </div>
+                        <div class="lesson-status locked">
+                            <i class="fas fa-lock"></i> Locked
+                        </div>
+                    </div>
+                </div>
+
+                <div class="lesson-card locked" onclick="showLockedMessage()">
+                    <div class="lesson-number">5</div>
+                    <div class="lesson-content">
+                        <h3>Cognitive Ease</h3>
+                        <p class="lesson-summary">The feeling of familiarity, repetition effects, and how ease of
+                            processing influences our judgments.</p>
+                        <div class="lesson-meta">
+                            <span><i class="fas fa-clock"></i> 16 min read</span>
+                            <span><i class="fas fa-tasks"></i> 3 exercises</span>
+                        </div>
+                        <div class="lesson-status locked">
+                            <i class="fas fa-lock"></i> Locked
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lessons-actions">
+                <button class="nav-button" onclick="selectBook('thinking-fast')">
+                    <i class="fas fa-question-circle"></i> Take Final Quiz
+                </button>
+                <button class="nav-button secondary" onclick="showScreen('books')">Back to Books</button>
+            </div>
+        </div>
+
+        <!-- Individual Lesson Screen -->
+        <div id="lesson-detail" class="screen">
+            <div class="screen-header">
+                <div class="logo-nav" onclick="showScreen('landing')">
+                    <i class="fas fa-home"></i>
+                    <span>📚 BookQuiz</span>
+                </div>
+            </div>
+
+            <div class="lesson-detail-header">
+                <button class="back-btn" onclick="showScreen('lessons')">
+                    <i class="fas fa-arrow-left"></i> Back to Lessons
+                </button>
+                <div class="lesson-progress">
+                    <span id="lesson-progress-text">Lesson 1 of 5</span>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="lesson-progress-bar" style="width: 20%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="lesson-content-area">
+                <div class="lesson-title-section">
+                    <h1 id="lesson-title">The Characters of the Story</h1>
+                    <div class="lesson-meta-info">
+                        <span><i class="fas fa-clock"></i> <span id="lesson-duration">15 min read</span></span>
+                        <span><i class="fas fa-book"></i> Chapter 1-2</span>
+                        <span><i class="fas fa-user"></i> Daniel Kahneman</span>
+                    </div>
+                </div>
+
+                <div class="lesson-summary-box">
+                    <h3><i class="fas fa-lightbulb"></i> Key Learning Objectives</h3>
+                    <ul id="lesson-objectives">
+                        <li>Understand the difference between System 1 and System 2 thinking</li>
+                        <li>Recognize examples of automatic vs. controlled mental processes</li>
+                        <li>Apply the two-system framework to everyday decisions</li>
+                    </ul>
+                </div>
+
+                <div class="lesson-content-text" id="lesson-content">
+                    <!-- Lesson content will be loaded here -->
+                </div>
+
+                <div class="homework-section">
+                    <h3><i class="fas fa-pencil-alt"></i> Practice Exercises</h3>
+                    <div class="homework-list" id="homework-exercises">
+                        <!-- Homework will be loaded here -->
+                    </div>
+                </div>
+
+                <div class="lesson-navigation">
+                    <button class="lesson-nav-btn" id="prev-lesson" onclick="navigateLesson(-1)" disabled>
+                        <i class="fas fa-chevron-left"></i> Previous Lesson
+                    </button>
+                    <button class="lesson-complete-btn" onclick="completeLesson()">
+                        <i class="fas fa-check"></i> Mark as Complete
+                    </button>
+                    <button class="lesson-nav-btn" id="next-lesson" onclick="navigateLesson(1)">
+                        Next Lesson <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="app-footer">
+            <div class="footer-content">
+                <p>Built with ❤️ by <a href="https://github.com/sameer-goel" target="_blank">Sameer Goel</a></p>
+                <p>Powered by learning science research • <a href="https://github.com/sameer-goel/total-recall"
+                        target="_blank">View Source</a></p>
+            </div>
+        </footer>
+
+        <!-- Quit Quiz Confirmation Modal -->
+        <div id="quit-modal" class="modal hidden">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Quit Quiz?</h3>
+                </div>
+                <div class="modal-body">
+                    <p>Are you sure you want to quit this quiz?</p>
+                    <p class="modal-warning">Your progress will be lost and you'll need to start over.</p>
+                </div>
+                <div class="modal-actions">
+                    <button class="modal-btn cancel" onclick="closeQuitModal()">
+                        <i class="fas fa-arrow-left"></i> Continue Quiz
+                    </button>
+                    <button class="modal-btn confirm" onclick="quitQuiz()">
+                        <i class="fas fa-times"></i> Quit Quiz
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
