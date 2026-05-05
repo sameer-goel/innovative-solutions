@@ -4,9 +4,7 @@ Catch-all for AI-adjacent projects that don't fit cleanly under Autonomous-AI or
 
 ## Projects
 
-| Folder | Description | Entry |
-|---|---|---|
-| [`prediction/`](prediction/) | Prediction engine / exploration experience. | `index.html` |
+No internal HTML apps yet.
 
 ## External (not in this repo)
 

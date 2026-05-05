@@ -60,7 +60,7 @@ A combined view of internal + external projects. Use this when rendering the ful
 - **External**: Update Mind Space, Learn Creative Prompt Engineering, Cultivate Inner Intelligence (book), GenAI Gym (Canva), Emotional Intelligence at Workplace (Prezi)
 
 #### Misc
-- **Internal**: Prediction
+- **Internal**: *(none)*
 - **External**: Life Experiences Dashboard, Dvine Meet, Human Evolution (Canva), Bio Computing (Canva)
 
 ### 🪷 Inner Intelligence
@@ -131,3 +131,4 @@ external_projects:
 ## Consolidation log
 
 - **2026-05-05**: `total-recall` and `BrainTrain/BrainGym` consolidated into `mind/` (this repo). Original repos `sameer-goel/total-recall` and `sameer-goel/BrainTrain` were made private then deleted on the same day. Old Pages URLs now return 404.
+- **2026-05-05**: `Misc/prediction/` removed from the repo and landing page. Project retired.

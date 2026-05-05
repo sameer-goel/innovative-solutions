@@ -38,9 +38,9 @@ Catch-all for AI-adjacent projects that don't fit cleanly under Autonomous-AI or
 
 | Project | Source | Destination | Status |
 |---|---|---|---|
-| Prediction | `sameerai/pages/prediction.html` | `Misc/prediction/index.html` | moved |
 | Human Evolution | Canva link | — | link |
 | Bio Computing | Canva site | — | link |
+| Prediction | `sameerai/pages/prediction.html` | — | retired (removed 2026-05-05 from Misc/) |
 | Work Dashboard | `sameerai/pages/work.html` | — | retired (portal page, not a standalone app) |
 | Digital Consciousness story | `sameerai/00about/index.html` | — | link (kept in `sameerai` as portal intro) |
 
@@ -83,11 +83,11 @@ Catch-all for AI-adjacent projects that don't fit cleanly under Autonomous-AI or
 |---|---:|---:|---:|
 | Autonomous-AI | 1 project (3 files) | 2 | 1 |
 | Learn-AI | 2 | 4 | 0 |
-| Misc | 1 | 2 | 2 |
+| Misc | 0 | 2 | 3 |
 | mind | 6 | 1 | 1 |
 | body | 0 | 1 | 0 |
 | soul | 1 | 3 | 0 |
-| **Total** | **11 projects** | **13** | **4** |
+| **Total** | **10 projects** | **13** | **5** |
 
 ## Path fixups applied during the move
 
